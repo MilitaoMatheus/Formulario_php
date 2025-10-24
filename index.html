@@ -10,20 +10,22 @@
 
     <form action="backend.php" method="post">
         <fieldset>
-            <label for="name">Digite seu nome: </label>
-            <input type="text">
+            <label for="nome">Digite seu nome: </label>
+            <input type="text" id="nome" name="nome">
             <br>
             <br>
             <label for="email">Digite seu email: </label>
-            <input type="email">
+            <input type="email" id="email" name="email">
             <br>
             <br>
             <label for="senha">Digite sua senha: </label>
-            <input type="password">
+            <input type="password" id="senha" name="senha">
             <br>
             <br>
             <label for="data">Digite sua data de nascimento: </label>
-            <input type="date">
+            <input type="date" id="data" name="data">
+
+            <input type="submit" value="Enviar">
         </fieldset>
     </form>
 </body>

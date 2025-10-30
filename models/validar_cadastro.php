@@ -20,8 +20,8 @@
         $exibeEmail = $consultaEmail->fetch(PDO::FETCH_ASSOC);
 
         //Verificando se o telefone já cadastrado já está presente no banco de dados
-        $consultaTel = $cn->query("select telefone from tbl_usuario where telefone = '$telefone'");
-        $exibeTel = $consultaTel->fetch(PDO::FETCH_ASSOC);
+        // $consultaTel = $cn->query("select telefone from tbl_usuario where telefone = '$telefone'");
+        // $exibeTel = $consultaTel->fetch(PDO::FETCH_ASSOC);
 
         //If em uma única linha. Utilizei para não ocupar tantas linhas de código
         if(empty($nome))$msgErros[] = "Insira seu nome corretamente";
@@ -40,9 +40,9 @@
             $msgErros[] = "Email já cadastrado";
         }
 
-        if($exibeTel){
-            $msgErros[] = "Telefone já cadastrado";
-        }
+        // if($exibeTel){
+        //     $msgErros[] = "Telefone já cadastrado";
+        // }
 
         //Validação da data de nascimento (um pouco mais extensa)
         if(empty($dataNasc)){
@@ -52,8 +52,8 @@
         }
 
         if(empty($msgErros)){
-            $incluir = $cn->query("insert into tbl_usuario(CPF, nome_usuario, email_usuario, telefone, data_nasc, senha)
-            values('$cpf', '$nome', '$email', '$telefone', '$dataNasc', '$senha')");
+            $incluir = $cn->query("insert into tbl_usuario(CPF, nome_usuario, email_usuario, data_nasc, senha)
+            values('$cpf', '$nome', '$email', '$dataNasc', '$senha')");
             header("Location: sucesso.php");
         } else {
             echo "<div class='erro'>";
@@ -68,3 +68,5 @@
         header("Location: sucesso.php");
         exit();
     }
+
+?>

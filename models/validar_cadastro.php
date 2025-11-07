@@ -1,5 +1,6 @@
 <?php
 
+    session_start();
     require __DIR__ . '/conexao.php';
     header('Content-Type: application/json; charset=utf-8');
 
@@ -76,7 +77,21 @@
             ':dataNasc' => $dataNasc,
             ':senha' => $senhaHash
         ]);
-        echo json_encode(['status' => 'ok', 'mensagem' => 'Cliente cadastrado com sucesso!']);
+
+        // $buscar = $cn->prepare("select id_usuario, CPF, nome_usuario from tbl_usuario where CPF = :cpf");
+        // $buscar->execute([':cpf' => $cpf]);
+        // $user = $buscar->fetch(PDO::FETCH_ASSOC);
+
+        $id = $cn->lastInsertId();
+        $_SESSION['id_usuario'] = $id;
+        $_SESSION['nome_usuario'] = $nome;
+        $_SESSION['cpf'] = $cpf;
+
+        echo json_encode([
+        'status' => 'ok',
+        'mensagem' => 'Cliente cadastrado com sucesso!',
+        'redirect' => '../pages/menu.php'
+]);
     } catch(PDOException $e){
         http_response_code(500);
         echo json_encode(['erro' => 'Erro no servidor: ' . $e->getMessage()]);

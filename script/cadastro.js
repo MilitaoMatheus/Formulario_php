@@ -36,6 +36,7 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
         if (resultado.status === 'ok') {
             alert('Cadastro realizado com sucesso!');
             document.getElementById('formCadastro').reset();
+            window.location.href = resultado.redirect;
         } 
         else if (resultado.erros && Array.isArray(resultado.erros)) {
             // Caso o PHP retorne múltiplos erros

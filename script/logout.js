@@ -1,8 +1,8 @@
-document.getElementById('btnLogout').addEventListener('click', async () =>{
-    if(!confirm('Deseja realmente sair?')) return;
+document.getElementById('btnLogout').addEventListener('click', async () => {
+    if (!confirm('Deseja realmente sair?')) return;
 
-    try{
-        const response = await fetch('../models/logout.php', {method: 'POST'});
+    try {
+        const response = await fetch('../models/logout.php', { method: 'POST' });
         const resultado = await response.json();
 
         if (resultado.status === 'ok') {

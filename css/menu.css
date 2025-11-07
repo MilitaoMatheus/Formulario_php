@@ -1,0 +1,166 @@
+/* === RESET GERAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* === BODY === */
+body {
+    background: #f8f8f8;
+    color: #222;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 40px;
+    border-bottom: 1px solid rgba(184, 134, 11, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+/* === LINKS DO NAV === */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 215, 0, 0.15);
+    color: #b8860b;
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+}
+
+/* === CONTEÚDO === */
+.conteudo {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.conteudo h1 {
+    font-size: 1.8rem;
+    color: #111;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+    display: inline-block;
+    padding-bottom: 0.4rem;
+}
+
+.conteudo p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* === SCROLL SUAVE === */
+html {
+    scroll-behavior: smooth;
+}
+
+/* === CONTAINER DOS CARDS === */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* === CARD INDIVIDUAL === */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(255, 69, 0, 0.25);
+}
+
+/* === TÍTULO E TEXTO === */
+.card h2 {
+    color: #111;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.card p {
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+/* === BOTÃO DO CARD === */
+.btn-card {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff4444, #b8860b);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
+}
+
+/* === RODAPÉ === */
+.rodape {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    color: #444;
+    font-size: 0.95rem;
+    margin-top: 60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rodape p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.rodape p span {
+    color: #b8860b;
+    font-weight: 600;
+}

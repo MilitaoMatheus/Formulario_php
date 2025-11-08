@@ -26,29 +26,30 @@
     </nav>
 
     <section class="conteudo">
-    <h1>Bem-vindo ao sistema, <?php echo $_SESSION['nome_usuario']; ?>!</h1>
-    <p>Selecione uma opção abaixo para navegar:</p>
+        <h1>Bem-vindo ao sistema, <?php echo $_SESSION['nome_usuario']; ?>!</h1>
+        <p>Selecione uma opção abaixo para navegar:</p>
 
-    <div class="cards-container">
-        <div class="card">
-            <h2>Registrar Receita</h2>
-            <p>Adicione novas receitas ao sistema.</p>
-            <a href="#" class="btn-card">Acessar</a>
-        </div>
+        <div class="cards-container">
+            <div class="card">
+                <h2>Registrar Receita</h2>
+                <p>Adicione novas receitas ao sistema.</p>
+                <a href="#" class="btn-card">Acessar</a>
+            </div>
 
-        <div class="card">
-            <h2>Registrar Despesa</h2>
-            <p>Adicione novas despesas ao sistema.</p>
-            <a href="#" class="btn-card">Acessar</a>
-        </div>
+            <div class="card">
+                <h2>Registrar Despesa</h2>
+                <p>Adicione novas despesas ao sistema.</p>
+                <a href="despesas.php" class="btn-card">Acessar</a>
+            </div>
 
-        <div class="card">
-            <h2>Relatórios</h2>
-            <p>Veja estatísticas e dados importantes.</p>
-            <a href="#" class="btn-card">Acessar</a>
+            <div class="card">
+                <h2>Relatórios</h2>
+                <p>Veja estatísticas e dados importantes.</p>
+                <a href="#" class="btn-card">Acessar</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
 <footer class="rodape">
     <p>&copy; <?php echo date('Y'); ?> Sistema Joana — Todos os direitos reservados.</p>
 </footer>

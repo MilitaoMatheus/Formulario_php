@@ -33,7 +33,7 @@
             <div class="card">
                 <h2>Registrar Receita</h2>
                 <p>Adicione novas receitas ao sistema.</p>
-                <a href="#" class="btn-card">Acessar</a>
+                <a href="receitas.php" class="btn-card">Acessar</a>
             </div>
 
             <div class="card">

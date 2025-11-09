@@ -10,7 +10,7 @@ if(!isset($_SESSION['id_usuario'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Despesas | Joana</title>
+    <title>Receitas | Joana</title>
     <link rel="stylesheet" href="../css/despesas.css">
 </head>
 <body>
@@ -26,7 +26,7 @@ if(!isset($_SESSION['id_usuario'])){
 
     <main>
         <section class="form-section">
-            <h2>Cadastrar / Editar Despesa</h2>
+            <h2>Cadastrar / Editar Receita</h2>
             <form id="formDespesas" method="POST">
                 <input type="hidden" id="idDespesaEdicao" value="">
                 
@@ -42,13 +42,6 @@ if(!isset($_SESSION['id_usuario'])){
                             <option value="">Selecione...</option>
                         </select>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="pagamento">Método de Pagamento:</label>
-                    <select name="pagamento" id="pagamento" required>
-                        <option value="">Selecione...</option>
-                    </select>
                 </div>
 
                 <div class="form-group">
@@ -68,7 +61,6 @@ if(!isset($_SESSION['id_usuario'])){
                         <th>Categoria</th>
                         <th>Valor (R$)</th>
                         <th>Data</th>
-                        <th>Método</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -84,6 +76,6 @@ if(!isset($_SESSION['id_usuario'])){
     </footer>
 
     <script src="../script/logout.js"></script>
-    <script src="../script/despesas.js"></script>
+    <script src="../script/receita.js"></script>
 </body>
 </html>

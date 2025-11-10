@@ -10,11 +10,6 @@ create table tbl_usuario(
     senha varchar(255) not null
 );
 
-create table tbl_tipo_lancamento(
-	id_tipo_lancamento int primary key auto_increment,
-    nome_tipo varchar(50) not null
-);
-
 create table tbl_tipo_receita(
 	id_tipo_receita int primary key auto_increment,
     nome_receita varchar(50) not null
@@ -106,15 +101,6 @@ values('Débito'),
       ('Dinheiro'),
       ('Boleto');
 select * from tbl_tipo_pagamento;
-
-insert into tbl_telefone_usuario(id_usuario, telefone, tipo_telefone)
-values(1, '(11) 92323-2323', 'Celular'),
-	  (1, '(11) 99999-9999', 'Empresarial'),
-      (1, '(11) 91111-1111', 'Celular'),
-      (2, '(11) 93333-3333', 'Fixo'),
-      (2, '(11) 94444-4444', 'Celular');
-select * from tbl_telefone_usuario where id_usuario=1;
-select * from tbl_usuario;
 
 insert into tbl_receita(id_usuario, id_tipo_receita, valor, data_recebimento)
 values(1, 1, 3500.00, '2025-10-01'),

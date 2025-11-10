@@ -19,7 +19,6 @@ if(!isset($_SESSION['id_usuario'])){
         <ul class="nav-links">
             <li><a href="menu.php">Início</a></li>
             <li><a href="perfil.php">Perfil</a></li>
-            <li><a href="#">Configurações</a></li>
             <li><a href="#" id="btnLogout">Sair</a></li>
         </ul>
     </nav>

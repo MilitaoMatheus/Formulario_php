@@ -1,0 +1,134 @@
+/* === RESET GERAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 40px;
+    border-bottom: 1px solid rgba(184, 134, 11, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #111;
+}
+
+/* === LINKS DO NAV === */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.ativo {
+    background-color: rgba(255, 215, 0, 0.15);
+    color: #b8860b;
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+.dashboard-container {
+    flex: 1;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* === CARDS === */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(255, 69, 0, 0.25);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card.receita p {
+    color: #228B22;
+}
+
+.card.despesa p {
+    color: #B22222;
+}
+
+.card.saldo p {
+    color: #B8860B;
+}
+
+/* === GRÁFICO === */
+.grafico-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* === RODAPÉ === */
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    color: #444;
+    font-size: 0.95rem;
+}

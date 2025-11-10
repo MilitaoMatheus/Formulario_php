@@ -20,7 +20,6 @@
         <ul class="nav-links">
             <li><a href="menu.php">Início</a></li>
             <li><a href="perfil.php">Perfil</a></li>
-            <li><a href="#">Configurações</a></li>
             <li><a href="#" id="btnLogout">Sair</a></li>
         </ul>
     </nav>
@@ -45,7 +44,7 @@
             <div class="card">
                 <h2>Relatórios</h2>
                 <p>Veja estatísticas e dados importantes.</p>
-                <a href="#" class="btn-card">Acessar</a>
+                <a href="dashboard.php" class="btn-card">Acessar</a>
             </div>
         </div>
     </section>

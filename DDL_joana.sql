@@ -3,18 +3,11 @@ use joana_db;
 
 create table tbl_usuario(
 	id_usuario int primary key auto_increment,
-    CPF varchar(11) unique,
+    CPF varchar(14) unique,
     email_usuario varchar(100) not null unique,
     nome_usuario varchar(100) not null,
     data_nasc date not null,
     senha varchar(255) not null
-);
-
-create table tbl_telefone_usuario(
-	id_telefone int primary key auto_increment,
-    id_usuario int not null,
-    telefone varchar(15) not null,
-    tipo_telefone varchar(20)
 );
 
 create table tbl_tipo_lancamento(
@@ -60,11 +53,6 @@ create table tbl_pagamento(
     valor decimal(10,2) not null,
     data_pagamento date not null
 );
-
--- tbl_telefone_usuario -> tbl_usuario
-alter table tbl_telefone_usuario
-add constraint fk_telefone_usuario
-foreign key (id_usuario) references tbl_usuario(id_usuario);
 
 -- tbl_receita -> tbl_usuario
 alter table tbl_receita
@@ -126,6 +114,7 @@ values(1, '(11) 92323-2323', 'Celular'),
       (2, '(11) 93333-3333', 'Fixo'),
       (2, '(11) 94444-4444', 'Celular');
 select * from tbl_telefone_usuario where id_usuario=1;
+select * from tbl_usuario;
 
 insert into tbl_receita(id_usuario, id_tipo_receita, valor, data_recebimento)
 values(1, 1, 3500.00, '2025-10-01'),
@@ -141,3 +130,8 @@ insert into tbl_pagamento(id_despesa, id_tipo_pagamento, valor, data_pagamento)
 values(1, 3, 150.00, '2025-10-02'),
 	  (2, 2, 200.00, '2025-10-05'),
       (3, 4, 100.00, '2025-10-08');
+      
+select * from tbl_usuario;
+select * from tbl_despesa;
+select * from tbl_tipo_receita;
+select * from tbl_receita;

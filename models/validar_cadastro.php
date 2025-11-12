@@ -66,7 +66,6 @@
             exit;
         }
 
-        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
         $incluir = $cn->prepare("insert into tbl_usuario(CPF, nome_usuario, email_usuario, data_nasc, senha)
             values(:cpf, :nome, :email, :dataNasc, :senha)
         ");
@@ -75,7 +74,7 @@
             ':nome' => $nome,
             ':email' => $email,
             ':dataNasc' => $dataNasc,
-            ':senha' => $senhaHash
+            ':senha' => $senha
         ]);
 
         // $buscar = $cn->prepare("select id_usuario, CPF, nome_usuario from tbl_usuario where CPF = :cpf");
